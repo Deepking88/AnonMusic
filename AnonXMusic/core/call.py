@@ -34,7 +34,7 @@ from AnonXMusic.utils.database import (
 from AnonXMusic.utils.exceptions import AssistantErr
 from AnonXMusic.utils.inline.play import stream_markup, telegram_markup
 from AnonXMusic.utils.stream.autoclear import auto_clean
-from AnonXMusic.utils.thumbnails import gen_thumb
+from AnonXMusic.utils.thumbnails import get_thumb
 
 
 async def _clear_(chat_id):
@@ -152,7 +152,7 @@ class Call:
             MediaStream(link),
             config=call_config,
         )
-        await asyncio.sleep(0.5)
+        await asyncio.sleep(0.0001)
         await assistant.leave_call(config.LOG_GROUP_ID)
 
     async def join_call(
@@ -280,7 +280,7 @@ class Call:
                         original_chat_id,
                         text=_["call_7"],
                     )
-                img = await gen_thumb(videoid)
+                img = await get_thumb(videoid)
                 button = telegram_markup(_, chat_id)
                 run = await app.send_photo(
                     original_chat_id,
@@ -338,7 +338,7 @@ class Call:
                         original_chat_id,
                         text=_["call_7"],
                     )
-                img = await gen_thumb(videoid)
+                img = await get_thumb(videoid)
                 button = stream_markup(_, videoid, chat_id)
                 await mystic.delete()
                 run = await app.send_photo(
