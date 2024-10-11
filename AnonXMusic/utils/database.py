@@ -652,20 +652,6 @@ async def remove_banned_user(user_id: int):
 # Audio Video Limit
 from pytgcalls.types import AudioQuality, VideoQuality
 
-AUDIO_FILE = os.path.join(config.TEMP_DB_FOLDER, "audio.json")
-VIDEO_FILE = os.path.join(config.TEMP_DB_FOLDER, "video.json")
-
-
-def load_data(file_path):
-    if os.path.exists(file_path):
-        with open(file_path, "r") as file:
-            return json.load(file)
-    return {}
-
-
-def save_data(file_path, data):
-    with open(file_path, "w") as file:
-        json.dump(data, file, indent=4)
 
 
 audio = load_data(AUDIO_FILE)
