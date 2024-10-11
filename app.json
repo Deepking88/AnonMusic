@@ -1,25 +1,22 @@
 {
-    "name": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
+    "name": "AnonXMusic",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
     "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
     "keywords": [
     "python3",
     "telegram",
-    "bot",
-    "AnonX",
-    "MusicBot",
     "telegram-bot",
     "pyrogram"
     ],
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "12380656",
         "required": true
       },
       "API_HASH": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "d927c13beaaf5110f25c505b7c071273",
         "required": true
       },
       "BOT_TOKEN": {
@@ -29,12 +26,12 @@
       },
       "MONGO_DB_URI": {
         "description": "Get a mongodb url from https://cloud.mongodb.com.",
-        "value": "",
+        "value": "mongodb+srv://Bikash:Bikash@bikash.yl2nhcy.mongodb.net/?retryWrites=true&w=majority",
         "required": true
       },
       "OWNER_ID": {
         "description": "The user id of user whom you would like to add as OWNER.",
-        "value": "",
+        "value": "6598017316",
         "required": true
       },
       "STRING_SESSION": {
@@ -54,16 +51,13 @@
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "",
+        "value": "-1002151543731",
         "required": true
       }
     },
     "buildpacks": [
           {
               "url": "heroku/python"
-          },
-          {
-              "url": "heroku/nodejs"
           },
           {
               "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
