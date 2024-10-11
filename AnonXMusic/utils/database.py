@@ -654,18 +654,13 @@ from pytgcalls.types import AudioQuality, VideoQuality
 
 
 
-audio = load_data(AUDIO_FILE)
-video = load_data(VIDEO_FILE)
-
 
 async def save_audio_bitrate(chat_id: int, bitrate: str):
     audio[str(chat_id)] = bitrate
-    save_data(AUDIO_FILE, audio)
 
 
 async def save_video_bitrate(chat_id: int, bitrate: str):
     video[str(chat_id)] = bitrate
-    save_data(VIDEO_FILE, video)
 
 
 async def get_aud_bit_name(chat_id: int) -> str:
