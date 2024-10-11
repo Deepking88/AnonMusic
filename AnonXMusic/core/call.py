@@ -148,7 +148,7 @@ class Call:
         assistant = await group_assistant(self, config.LOG_GROUP_ID)
         call_config = GroupCallConfig(auto_start=False)
         await assistant.play(
-            config.LOG_GROUP_ID,
+            config.LOGGER_ID,
             MediaStream(link),
             config=call_config,
         )
@@ -286,8 +286,8 @@ class Call:
                     original_chat_id,
                     photo=img,
                     caption=_["stream_1"].format(
-                        title[:27],
                         f"https://t.me/{app.username}?start=info_{videoid}",
+                        title[:23],
                         check[0]["dur"],
                         user,
                     ),
@@ -345,8 +345,8 @@ class Call:
                     original_chat_id,
                     photo=img,
                     caption=_["stream_1"].format(
-                        title[:27],
                         f"https://t.me/{app.username}?start=info_{videoid}",
+                        title[:23],
                         check[0]["dur"],
                         user,
                     ),
@@ -452,8 +452,8 @@ class Call:
                             original_chat_id,
                             photo=img,
                             caption=_["stream_1"].format(
-                                title[:27],
                                 f"https://t.me/{app.username}?start=info_{videoid}",
+                                title[:23],
                                 check[0]["dur"],
                                 user,
                             ),
