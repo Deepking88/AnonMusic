@@ -1,5 +1,5 @@
 
-from AnonXMusic.core.bot import AnonyBot
+from AnonXMusic.core.bot import Anony
 from AnonXMusic.core.dir import dirr
 from AnonXMusic.core.git import git
 from AnonXMusic.core.userbot import Userbot
@@ -22,7 +22,7 @@ heroku()
 # Load Sudo Users from DB
 sudo()
 # Bot Client
-app = AnonyBot()
+app = Anony()
 
 # Assistant Client
 userbot = Userbot()
